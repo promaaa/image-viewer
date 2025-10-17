@@ -1,0 +1,11 @@
+.thumbnailViewer {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: center;
+    background-color: #deeeff;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
