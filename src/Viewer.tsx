@@ -1,9 +1,24 @@
 import './Viewer.css'
+import type { ImageData } from './types'
 
-function Viewer() {
+interface ViewerProps {
+  image: ImageData
+  scale: number
+}
+
+function Viewer({ image, scale }: ViewerProps) {
   return (
     <div className="viewer">
-      <p>Viewer</p>
+      <img 
+        src={image.path} 
+        alt={image.name}
+        style={{ 
+          width: `${scale}%`,
+          height: 'auto',
+          maxWidth: '100%',
+          objectFit: 'contain'
+        }}
+      />
     </div>
   )
 }

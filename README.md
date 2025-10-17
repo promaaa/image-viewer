@@ -1,74 +1,74 @@
-# React + TypeScript + Vite
+# Image Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application de visualisation d'images moderne construite avec React, TypeScript et Redux Toolkit.
 
-Currently, two official plugins are available:
+## 🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📸 Visualisation d'images avec navigation intuitive
+- 🔍 Zoom ajustable (1% à 300%)
+- 🖼️ Vignettes de prévisualisation
+- 📊 Affichage détaillé des informations d'image
+- ⚡ Interface réactive et performante
+- 🎨 Design moderne avec animations fluides
 
-## React Compiler
+## 🛠️ Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Framework UI
+- **TypeScript** - Typage statique
+- **Redux Toolkit** - Gestion d'état
+- **Vite** - Build tool et dev server
+- **ESLint** - Linting et qualité du code
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Cloner le repository
+git clone https://github.com/promaaa/image-viewer.git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Installer les dépendances
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Démarrage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Démarrer le serveur de développement
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build pour la production
+npm run build
+
+# Prévisualiser le build de production
+npm run preview
+
+# Linter le code
+npm run lint
 ```
-# image-viewer
+
+## 📂 Structure du projet
+
+```
+image-viewer/
+├── public/          # Ressources statiques (icônes, images)
+├── src/
+│   ├── store/      # Configuration Redux
+│   ├── *.tsx       # Composants React
+│   ├── *.css       # Styles
+│   └── types.ts    # Types TypeScript
+└── ...
+```
+
+## 🎯 Utilisation
+
+1. L'application charge automatiquement 20 images d'exemple
+2. Utilisez les boutons de navigation ou cliquez sur les vignettes
+3. Ajustez le zoom avec le slider
+4. Affichez/masquez les détails avec le bouton info
+
+## 📝 License
+
+MIT
+
+## 👤 Auteur
+
+[promaaa](https://github.com/promaaa)

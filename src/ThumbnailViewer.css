@@ -9,3 +9,30 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.thumbnail,
+.thumbnail-active {
+    width: 130px;
+    height: auto;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    object-fit: cover;
+}
+
+.thumbnail {
+    border: 2px solid #ccc;
+}
+
+.thumbnail:hover {
+    border-color: #4287f5;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(66, 135, 245, 0.5);
+}
+
+.thumbnail-active {
+    border: 3px solid #4287f5;
+    box-shadow: 0 3px 10px rgba(66, 135, 245, 0.7);
+    transform: scale(1.05);
+}

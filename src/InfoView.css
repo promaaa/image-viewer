@@ -2,11 +2,44 @@
   position: absolute;
   right: 15px;
   width: 20%;
-  min-width: 200px;
+  min-width: 250px;
+  max-width: 350px;
   margin: 5px 0px;
   padding: 16px;
   border-radius: 12px;
   background-color: rgba(33, 69, 169, 0.396);
   backdrop-filter: blur(5px);
   color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+.info-view h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 8px;
+}
+
+.info-view p {
+  margin: 6px 0;
+  font-size: 0.9em;
+  word-wrap: break-word;
+}
+
+.info-view strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
